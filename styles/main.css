@@ -1,0 +1,304 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.dark {
+  /*Backgrounds */
+  --bg-body: hsl(222, 26%, 31%);
+  --bg-toggle_keypad: hsl(223, 31%, 20%);
+  --bg-display: hsl(224, 36%, 15%);
+
+  /*Key Backgrounds*/
+  --key-reset-del-bg: hsl(225, 21%, 49%);
+  --key-equals-toggle-bg: hsl(6, 63%, 50%);
+  --key-num-operation-bg: hsl(30, 25%, 89%);
+  
+   /*Key Shadows*/
+  --key-reset-del-shadow: hsl(224, 28%, 35%);
+  --key-equals-toggle-shadow: hsl(6, 70%, 34%);
+  --key-num-operation-shadow:hsl(28, 16%, 65%);
+  
+  /* Text Colors */
+  --text-numkeys-operation: hsl(221, 14%, 31%);
+  --text-display: hsl(0, 0%, 100%);
+  --text-del-reset: hsl(0, 0%, 100%);
+  --text-equals: hsl(0, 0%, 100%);
+
+  /*Toggle*/
+  --align-toggle: flex-start;
+}
+
+.light {
+  /*Backgrounds */
+  --bg-body: hsl(0, 0%, 90%);
+  --bg-toggle_keypad: hsl(0, 5%, 81%);
+  --bg-display: hsl(0, 0%, 93%);
+
+  /*Key Backgrounds*/
+  --key-reset-del-bg: hsl(185, 42%, 37%);
+  --key-equals-toggle-bg: hsl(25, 98%, 40%);
+  --key-num-operation-bg: hsl(45, 7%, 89%);
+
+  /*Key Shadows*/
+  --key-reset-del-shadow: hsl(185, 58%, 25%);
+  --key-equals-toggle-shadow: hsl(25, 99%, 27%);
+  --key-num-operation-shadow:hsl(35, 11%, 61%);
+  
+  /* Text Colors */
+  --text-numkeys-operation: hsl(60, 10%, 19%);
+  --text-display: hsl(0, 0%, 0%);
+  --text-del-reset: hsl(0, 0%, 100%);
+  --text-equals: hsl(0, 0%, 100%);
+
+  /*Toggle*/
+  --align-toggle: center;
+}
+
+.purple {
+  /*Backgrounds */
+  --bg-body: hsl(268, 75%, 9%);
+  --bg-toggle_keypad: hsl(268, 71%, 12%);
+  --bg-display: hsl(268, 71%, 12%);
+
+  /*Key Backgrounds*/
+  --key-reset-del-bg: hsl(281, 89%, 26%);
+  --key-equals-toggle-bg: hsl(176, 100%, 44%);
+  --key-num-operation-bg: hsl(268, 47%, 21%);
+
+  /* Key Shadows */
+  --key-reset-del-shadow: hsl(285, 91%, 52%);
+  --key-equals-toggle-shadow: hsl(177, 92%, 70%);
+  --key-num-operation-shadow: hsl(290, 70%, 36%);
+  
+  /* Text Colors */
+  --text-numkeys-operation: hsl(52, 100%, 62%);
+  --text-display: hsl(52, 100%, 62%);
+  --text-del-reset: hsl(0, 0%, 100%);
+  --text-equals: hsl(198, 20%, 13%);
+
+  /*Toggle*/
+  --align-toggle: flex-end;
+}
+
+.d-flex {
+  display: flex;
+}
+
+body {
+  font-family: Spartan;
+  background-color: var(--bg-body);
+  transition: all 0.2s;
+}
+
+.container {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.header__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  align-items: flex-end;
+  color: var(--text-display);
+}
+
+.header .toggle .switch {
+  flex-direction: column;
+}
+
+.header .toggle .switch__keys {
+  font-size: 0.6rem;
+  font-weight: 700;
+  width: 50px;
+  justify-content: space-around;
+}
+.header .toggle .switch__keys .theme {
+  cursor: pointer;
+  color: var(--text-display)
+}
+.header .toggle__title {
+  margin-right: 10px;
+  align-items: flex-end;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--text-display);
+}
+.header .toggle .switcher {
+  border-radius: 50px;
+  height: 20px;
+  width: 50px;
+  margin-top: 2px;
+  flex-direction: column;
+  align-items: var(--align-toggle);
+  transition: align-items 1s ease;
+  justify-content: center;
+  background-color: var(--bg-toggle_keypad);
+  
+}
+.header .toggle .switcher_toggle {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  margin: 2px;
+  background-color: var(--key-equals-toggle-bg);
+}
+
+.display {
+  height: 100px;
+  width: 400px;
+  max-height: 100vh;
+  background-color: var(--bg-display);
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  color: var(--text-display);
+}
+.display .current-number {
+  word-wrap: break-word;
+  word-break: break-all;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.display .previous-number {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.calculator {
+  height: 360px;
+  width: 400px;
+  background-color: var(--bg-toggle_keypad);
+  display: grid;
+  grid-template-columns: 75px 75px 75px 75px;
+  grid-template-rows: 45px 45px 45px 45px 45px;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  row-gap: 20px;
+  justify-content: space-evenly;
+  padding: 25px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.calculator button {
+  border: none;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.calculator button:active {
+  transition: all 0.2s ease;
+  animation-name: button-active;
+  animation-duration: 0.5s;
+}
+
+@keyframes button-active {
+  0%{
+    transform: translateY(1px);
+  }
+  50%{
+    transform: translateY(2px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.calculator .delete, .calculator .reset, .calculator .equals {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.calculator .delete, .calculator .reset {
+background-color: var(--key-reset-del-bg);
+color: var(--text-del-reset);
+box-shadow: 0 3px 0 var(--key-reset-del-shadow);
+}
+
+.calculator .reset {
+  grid-column: 1/span 2;
+}
+.calculator .equals {
+  grid-column: 3/span 2;
+  color: var(--text-equals);
+  background-color: var(--key-equals-toggle-bg);
+  box-shadow: 0 3px 0 var(--key-equals-toggle-shadow);
+}
+.calculator .numkey, .calculator .operationkey {
+  background-color: var(--key-num-operation-bg);
+  color: var(--text-numkeys-operation);
+  box-shadow: 0 3px 0 var(--key-num-operation-shadow);
+}
+
+
+@media screen and (min-width: 320px ) and (max-width: 769px) {
+  .container{
+    top: 45%;
+    transform: translate(-50%, -45%);
+  }
+  .container,.display,.calculator {
+    width: 335px;
+  }
+  .header__title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .header .toggle .switcher {
+    height: 25px;
+    width: 75px;
+  }
+  .header .toggle .switch__keys {
+    font-size: 0.8rem;
+    width: 75px;
+  }
+  .header .toggle__title {
+    margin-right: 25px;
+    font-size: 0.9rem;
+  }
+
+  .header .toggle .switcher_toggle {
+    height: 15px;
+    width: 15px;
+  }
+  
+  .calculator {
+    height: 425px;
+    grid-template-columns: 65px 65px 65px 65px;
+    grid-template-rows: 63px 63px 63px 63px 63px;
+    -moz-column-gap: 13px;
+         column-gap: 13px;
+    row-gap: 15px;
+    border-radius: 15px;
+  }
+  .calculator button {
+    border: none;
+    border-radius: 5px;
+    font-size: 2rem;
+  }
+  .calculator .delete, .calculator .reset {
+    box-shadow: 0 4px 0 var(--key-reset-del-shadow);
+    }
+  
+  .calculator .equals {
+    box-shadow: 0 4px 0 var(--key-equals-toggle-shadow);
+  }
+
+  .calculator .numkey, .calculator .operationkey {
+      box-shadow: 0 4px 0 var(--key-num-operation-shadow);
+    }
+}

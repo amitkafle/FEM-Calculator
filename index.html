@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FEM - Calculator">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+  <title>FEM - Calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" id="css" href="./styles/main.css">
+</head>
+
+<body class="dark">
+
+  <div class="container">
+    <!--Header Area-->
+    <div class="header d-flex">
+      <div class="header__title d-flex">calc</div>
+
+      <!--Toggle-->
+      <div class="toggle d-flex">
+        <div class="toggle__title d-flex">THEME</div>
+        <div class="switch d-flex">
+          <div class="switch__keys d-flex">
+            <div class="theme" prefers-color-scheme="dark">1</div>
+            <div class="theme" prefers-color-scheme="light">2</div>
+            <div class="theme" prefers-color-scheme="purple">3</div>
+          </div>
+          <div class="switcher d-flex">
+            <div class="switcher_toggle"></div>
+          </div>
+        </div>
+        <!--Toggle-->
+
+      </div>
+    </div>
+    <!--Header Area-->
+
+
+    <!--Input & Output Screen-->
+    <div class="display d-flex">
+      <div class="previous-number"></div>
+      <div class="current-number"></div>
+    </div>
+
+    <!--Calculator Grid-->
+    <div class="calculator">
+      <button class="numkey">7</button>
+      <button class="numkey">8</button>
+      <button class="numkey">9</button>
+      <button class="delete">DEL</button>
+      <button class="numkey">4</button>
+      <button class="numkey">5</button>
+      <button class="numkey">6</button>
+      <button class="operationkey">+</button>
+      <button class="numkey">1</button>
+      <button class="numkey">2</button>
+      <button class="numkey">3</button>
+      <button class="operationkey">-</button>
+      <button class="numkey">.</button>
+      <button class="numkey">0</button>
+      <button class="operationkey">/</button>
+      <button class="operationkey">&times;</button>
+      <button class="reset">RESET</button>
+      <button class="equals">=</button>
+    </div>
+
+  </div>
+  <script src="./scripts/themes_switcher.js"></script>
+  <script src="./scripts/calc.js"></script>
+</body>
+
+</html>
