@@ -91,7 +91,8 @@ body {
   font-family: Spartan;
   background-color: var(--bg-body);
   transition: all 0.2s;
-}
+  
+  }
 
 .container {
   width: 400px;
@@ -249,7 +250,7 @@ box-shadow: 0 3px 0 var(--key-reset-del-shadow);
 @media screen and (min-width: 320px ) and (max-width: 769px) {
   .container{
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -45%);
   }
   .container,.display,.calculator {
     width: 335px;
