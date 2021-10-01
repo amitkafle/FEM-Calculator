@@ -15,19 +15,19 @@
 
 <body class="dark">
 
-  <div class="container">
+  <div class="container" role="main">
     <!--Header Area-->
     <div class="header d-flex">
-      <div class="header__title d-flex">calc</div>
+      <h1 class="header__title d-flex" role="title">calc</h1>
 
       <!--Toggle-->
       <div class="toggle d-flex">
         <div class="toggle__title d-flex">THEME</div>
         <div class="switch d-flex">
-          <div class="switch__keys d-flex">
-            <div class="theme" prefers-color-scheme="dark">1</div>
-            <div class="theme" prefers-color-scheme="light">2</div>
-            <div class="theme" prefers-color-scheme="purple">3</div>
+          <div class="switch__keys d-flex" role="theme-switcher">
+            <div class="theme" color-scheme="dark">1</div>
+            <div class="theme" color-scheme="light">2</div>
+            <div class="theme" color-scheme="purple">3</div>
           </div>
           <div class="switcher d-flex">
             <div class="switcher_toggle"></div>
@@ -47,11 +47,11 @@
     </div>
 
     <!--Calculator Grid-->
-    <div class="calculator">
+    <div class="calculator" role="calculator">
       <button class="numkey">7</button>
       <button class="numkey">8</button>
       <button class="numkey">9</button>
-      <button class="delete">DEL</button>
+      <button class="delete" role="delete">DEL</button>
       <button class="numkey">4</button>
       <button class="numkey">5</button>
       <button class="numkey">6</button>
@@ -64,8 +64,8 @@
       <button class="numkey">0</button>
       <button class="operationkey">/</button>
       <button class="operationkey">&times;</button>
-      <button class="reset">RESET</button>
-      <button class="equals">=</button>
+      <button class="reset" role="reset">RESET</button>
+      <button class="equals" role="submit">=</button>
     </div>
 
   </div>

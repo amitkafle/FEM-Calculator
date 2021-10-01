@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 switcher.addEventListener("click", (e) => {
     if(e.target.classList.contains("theme")){
-        let theme = e.target.getAttribute("prefers-color-scheme");
+        let theme = e.target.getAttribute("color-scheme");
         localStorage.setItem("prefers-color-scheme",theme);
         setTheme(theme);
     }
