@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 - Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/calculator-app-using-html-css-and-javascript-UOeW_NaM-)
-- Live Site URL: [Github Pages](https://amitkafle.github.io/FEM-Calculator/)
+- Live Site URL: [Github Pages](https://amitkafle.github.io/FEM-Calculator-App/)
 
 ## My process
 ### Built with
