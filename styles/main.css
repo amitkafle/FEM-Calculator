@@ -88,18 +88,23 @@
 }
 
 body {
+  position: relative;
   font-family: Spartan;
   background-color: var(--bg-body);
   transition: all 0.2s;
-  
+  display: grid;
+  place-items: center;
+  align-items: center;
+  height: max(100vh, 700px);
   }
 
 .container {
   width: 400px;
-  position: absolute;
+  margin: 10px;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 .header {
@@ -248,15 +253,11 @@ box-shadow: 0 3px 0 var(--key-reset-del-shadow);
 
 
 @media screen and (min-width: 320px ) and (max-width: 769px) {
-  .container{
-    top: 50%;
-    transform: translate(-50%, -45%);
-  }
   .container,.display,.calculator {
-    width: 335px;
+    width: 300px;
   }
   .header__title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
   }
   .header .toggle .switcher {
@@ -279,8 +280,8 @@ box-shadow: 0 3px 0 var(--key-reset-del-shadow);
   
   .calculator {
     height: 425px;
-    grid-template-columns: 65px 65px 65px 65px;
-    grid-template-rows: 63px 63px 63px 63px 63px;
+    grid-template-columns: 60px 60px 60px 60px;
+    grid-template-rows: 58px 58px 58px 58px 58px;
     -moz-column-gap: 13px;
          column-gap: 13px;
     row-gap: 15px;
